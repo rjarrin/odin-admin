@@ -42,6 +42,20 @@ function generateCardsData() {
             viewIcon: 'icons/eye-circle.svg',
             shareIcon: 'icons/share-circle.svg'
         },
+        {
+            title: "Project F",
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            favoriteIcon: 'icons/star-box.svg',
+            viewIcon: 'icons/eye-circle.svg',
+            shareIcon: 'icons/share-circle.svg'
+        },
+        {
+            title: "Project F",
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            favoriteIcon: 'icons/star-box.svg',
+            viewIcon: 'icons/eye-circle.svg',
+            shareIcon: 'icons/share-circle.svg'
+        },
     ];
     return cardsData;
 }
@@ -146,16 +160,21 @@ function createProfileContainer(profile) {
     profilePicture.src = profile.profilePicture;
     profilePicture.alt = "Avatar";
     profileContainer.appendChild(profilePicture);
+    // Create text container
+    const textContainer = document.createElement("div");
+    textContainer.className = "text-container";
     // Create handle
     const handle = document.createElement("span");
     handle.className = "handle";
     handle.textContent = profile.handle;
-    profileContainer.appendChild(handle);
+    textContainer.appendChild(handle);
     // Create profile description
     const description = document.createElement("span");
     description.className = "description";
     description.textContent = profile.description;
-    profileContainer.appendChild(description);
+    textContainer.appendChild(description);
+    // Append the text container to the profile container
+    profileContainer.appendChild(textContainer);
     // Append information to card
     return profileContainer;
 }
