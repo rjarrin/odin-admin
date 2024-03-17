@@ -75,6 +75,32 @@ function createAnnouncementCard() {
     return announcementCard;
 }
 
+function generateProfiles() {
+    const trendingProfiles = [
+        {
+            handle: "@handle1",
+            description: "Description for handle1",
+            profilePicture: "images/avatar.png"
+        },
+        {
+            handle: "@handle2",
+            description: "Description for handle2",
+            profilePicture: "images/avatar.png"
+        },
+        {
+            handle: "@handle3",
+            description: "Description for handle3",
+            profilePicture: "images/avatar.png"
+        },
+        {
+            handle: "@handle4",
+            description: "Description for handle4",
+            profilePicture: "images/avatar.png"
+        }
+    ];
+    return trendingProfiles;
+}
+
 function createCard(title, text, favoriteIcon, viewIcon, shareIcon) {
     //Create card container
     const card = document.createElement("div");
@@ -111,6 +137,29 @@ function createCard(title, text, favoriteIcon, viewIcon, shareIcon) {
     return card;
 }
 
+function createProfileContainer(profile) {
+    // Create profile container
+    const profileContainer = document.createElement("div");
+    profileContainer.className = "trending-profile";
+    // Create profile picture element
+    const profilePicture = document.createElement("img");
+    profilePicture.src = profile.profilePicture;
+    profilePicture.alt = "Avatar";
+    profileContainer.appendChild(profilePicture);
+    // Create handle
+    const handle = document.createElement("span");
+    handle.className = "handle";
+    handle.textContent = profile.handle;
+    profileContainer.appendChild(handle);
+    // Create profile description
+    const description = document.createElement("span");
+    description.className = "description";
+    description.textContent = profile.description;
+    profileContainer.appendChild(description);
+    // Append information to card
+    return profileContainer;
+}
+
 // Select card grid
 const cardGrid = document.querySelector(".card-grid")
 // Generate card data
@@ -118,7 +167,6 @@ const cardsData = generateCardsData();
 // Generate and append cards
 cardsData.forEach(card => {
     const cardHTML = createCard(card.title, card.text, card.favoriteIcon, card.viewIcon, card.shareIcon);
-    console.log(cardHTML);
     cardGrid.appendChild(cardHTML);
 });
 // Select the announcements container
@@ -127,3 +175,13 @@ const announcementsContainer = document.querySelector(".announcements-container"
 const announcementCard = createAnnouncementCard();
 // Append the announcement card to the announcements container
 announcementsContainer.appendChild(announcementCard);
+//Select the trending container
+const trendingContainer = document.querySelector(".trending-card");
+// Generate profile data
+const trendingProfiles = generateProfiles(); 
+// Append profile data
+trendingProfiles.forEach(profile => {
+    const profileContainer = createProfileContainer(profile);
+    console.log(profile);
+    trendingContainer.appendChild(profileContainer);
+});
