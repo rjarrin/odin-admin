@@ -8,14 +8,15 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     height: 100vh;
+    background-color: #12192a;
 }
 
 .sidebar-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #333;
-    color: azure;
+    background-color: #1d2536;
+    color: #cdd7e2;
 }
 
 .logo-container {
@@ -28,6 +29,7 @@ body {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+    filter: invert(82%) sepia(12%) saturate(205%) hue-rotate(171deg) brightness(106%) contrast(85%);
 }
 
 .list-container {
@@ -46,13 +48,18 @@ body {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    cursor: pointer;
 }
 
 .list-item img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    filter: invert(82%) sepia(12%) saturate(205%) hue-rotate(171deg) brightness(106%) contrast(85%);
+}
+
+.list-item-text:hover {
+    color: #5fa4e3;
+    cursor: pointer;
 }
 
 .header-container {
@@ -61,6 +68,7 @@ body {
     gap: 1rem;
     padding: 1rem;
     box-shadow: 0 4px 6x rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 .top-row {
@@ -72,6 +80,7 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(127deg) brightness(108%) contrast(101%);
 }
 
 .search-bar {
@@ -100,6 +109,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: white;
 }
 
 .user-info {
@@ -120,7 +130,7 @@ body {
 }
 
 .button {
-    background-color: #333;
+    background-color: #345985;
     color: white;
     border: none;
     border-radius: 20px;
@@ -134,14 +144,12 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 5px;
-    background-color: #14f0e5;
     /* height: 100vh; */
 }
 
 .projects-container {
     grid-column: 1;
     padding: 5px 5px;
-    background-color: rgb(139, 237, 10);
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -149,6 +157,7 @@ body {
 
 .content-titles {
     margin-bottom: 20px;
+    color: white;
 }
 
 .card-grid {
@@ -158,8 +167,8 @@ body {
 }
 
 .card {
-    background-color: white;
-    border-left: 10px solid yellowgreen;
+    background-color: #374558;
+    border-left: 10px solid #604d90;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -170,6 +179,7 @@ body {
 .card h4 {
     margin: 0 0 10px 0;
     font-weight: bold;
+    color: #5fa4e3;
 }
 
 .card p {
@@ -179,7 +189,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0;
-    color: gray;
+    color: whitesmoke;
 }
 
 .cards-icons {
@@ -192,12 +202,19 @@ body {
     height: 20px;
     margin-right: 10px;
     margin-top: 15px;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(127deg) brightness(108%) contrast(101%);
+    transition: all 0.3s ease-in-out;
+}
+
+.cards-icons img:hover {
+    filter: invert(74%) sepia(56%) saturate(3238%) hue-rotate(181deg) brightness(92%) contrast(93%);
+    transform: scale(1.2) rotate(360deg);
 }
 
 /* Announcement card */
 .announcement-card {
-    background-color: white;
-    border-left: 10px solid aqua;
+    background-color: #374558;
+    border-left: 10px solid #a273e7;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -209,17 +226,18 @@ body {
 .announcement-title {
     font-weight: bold;
     margin-bottom: 5px;
+    color: #5fa4e3;
 }
 
 .announcement-text {
-    color: gray;
+    color: whitesmoke;
     margin-bottom: 5px;
 }
 
 .announcement-line {
     border: 0;
     height: 1px;
-    background: #333;
+    background: #000000;
     margin: 10px 0;
 }
 
@@ -232,14 +250,12 @@ body {
 }
 
 .announcements-container {
-    background-color: coral;
     padding-bottom: 20px;
     overflow: auto;
 }
 
 /* Trending card */
 .trending-container {
-    background-color: #971818;
     padding: 5px 5px;
     flex-shrink: 0;
     margin-top: auto;
@@ -250,8 +266,8 @@ body {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     padding: 20px;
-    background-color: white;
-    border-left: 10px solid aqua;
+    background-color: #374558;
+    border-left: 10px solid #503c83;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-height: 200px;
@@ -280,9 +296,10 @@ body {
 .trending-profile .handle {
     font-weight: bold;
     margin-bottom: 5px;
+    color: #5fa4e3;
 }
 
 .trending-profile .description {
-    color: gray;
+    color: whitesmoke;
     margin-bottom: 0;
 }
