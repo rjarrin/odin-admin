@@ -11,6 +11,7 @@ body {
     background-color: #12192a;
 }
 
+/* Sidebar container and elements */
 .sidebar-container {
     display: flex;
     flex-direction: column;
@@ -62,6 +63,7 @@ body {
     cursor: pointer;
 }
 
+/* Header container and elements */
 .header-container {
     display: grid;
     grid-template-rows: auto auto;
@@ -147,6 +149,7 @@ body {
     /* height: 100vh; */
 }
 
+/* Project container and elements */
 .projects-container {
     grid-column: 1;
     padding: 5px 5px;
@@ -211,7 +214,21 @@ body {
     transform: scale(1.2) rotate(360deg);
 }
 
-/* Announcement card */
+/* Announcements and Trending containers */
+.news-container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+}
+
+/* Announcements container */
+.announcements-container {
+    padding-bottom: 20px;
+    overflow: auto;
+}
+
 .announcement-card {
     background-color: #374558;
     border-left: 10px solid #a273e7;
@@ -241,20 +258,7 @@ body {
     margin: 10px 0;
 }
 
-.news-container {
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    gap: 10px;
-}
-
-.announcements-container {
-    padding-bottom: 20px;
-    overflow: auto;
-}
-
-/* Trending card */
+/* Trending container */
 .trending-container {
     padding: 5px 5px;
     flex-shrink: 0;
